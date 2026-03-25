@@ -16,7 +16,7 @@ const projects = [
     shortName: "Wild Oasis",
     description: "Full-stack hotel management system with booking management, cabin tracking, dark mode, and real-time dashboard analytics.",
     tags: ["React", "Supabase", "PostgreSQL", "Tailwind CSS"],
-    link: "https://the-wild-oasis-mayank.vercel.app",
+    link: "https://wildoasisresorts.vercel.app",
     linkLabel: "View Live",
     gradient: "from-[#10b981] to-[#1e293b]",
   },
