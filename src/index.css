@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 64%;
+
+    --accent: 263 70% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    --gradient-blue: 217 91% 60%;
+    --gradient-purple: 263 70% 58%;
+    --glass-bg: 0 0% 100% / 0.05;
+    --glass-border: 0 0% 100% / 0.1;
+    --glow-blue: 217 91% 60% / 0.4;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  .glow-button {
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+    box-shadow: 0 0 20px hsl(var(--glow-blue));
+  }
+
+  .glow-button:hover {
+    box-shadow: 0 0 30px hsl(217 91% 60% / 0.6);
+    transform: translateY(-1px);
+  }
+
+  .outline-button {
+    @apply border border-white/30 text-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:border-white/60 hover:bg-white/5;
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, hsl(0 0% 100% / 0.08) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  .glow-border {
+    @apply transition-all duration-300;
+  }
+
+  .glow-border:hover {
+    box-shadow: 0 0 20px hsl(var(--glow-blue)), inset 0 0 20px hsl(217 91% 60% / 0.05);
+    border-color: hsl(var(--primary));
+  }
+}
