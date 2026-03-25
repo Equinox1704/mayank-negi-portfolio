@@ -3,7 +3,7 @@
 Personal portfolio showcasing my work as a full-stack developer and AI automation builder.
 
 ## Live Site
-[mayanknegi.dev](https://mayanknegi.dev)
+[mayank-negi-portfolio.vercel.app/]([https://mayanknegi.dev](https://mayank-negi-portfolio.vercel.app/))
 
 ## Built With
 - React + TypeScript
